@@ -4,11 +4,24 @@ class SmurfForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // smurf: this.props.activeSmurf || {
       name: '',
       age: '',
       height: ''
-    };
+    // }
+    }
   }
+
+//   componentDidUpdate(prevProps) {
+//     if(
+//         this.props.activeSmurf &&
+//         prevProps.activeSmurf !== this.props.activeSmurf
+//     ) {
+//         this.setState({
+//             friend: this.props.activeSmurf
+//         })
+//     }
+//  }
 
   addSmurf = event => {
     event.preventDefault();
@@ -20,6 +33,10 @@ class SmurfForm extends Component {
       age: '',
       height: ''
     });
+  }
+
+  updateSmurf = event => {
+    event.preventDefault();
   }
 
   handleInputChange = e => {
@@ -48,7 +65,8 @@ class SmurfForm extends Component {
             value={this.state.height}
             name="height"
           />
-          <button type="submit">Add to the village</button>
+          <button type="submit" onClick={this.addSmurf}>Add to the village</button>
+          <button type="submit"onClick={this.updateSmurf}>Update Smurf</button>
         </form>
       </div>
     );
