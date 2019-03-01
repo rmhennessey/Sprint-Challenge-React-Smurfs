@@ -82,8 +82,8 @@ class App extends Component {
           <SmurfForm 
           {...props}
           postSmurf={this.postSmurf}
-          updateSmurf={this.updateSmurf}
-          smurfs={this.state.smurfs}
+          // updateSmurf={this.updateSmurf}
+          // smurfs={this.state.smurfs}
           // activeSmurf={this.state.activeSmurf} 
           /> 
         )}/>
@@ -95,7 +95,8 @@ class App extends Component {
           {...props}
           smurfs={this.state.smurfs} 
           deleteSmurf={this.deleteSmurf}
-          setUpdateForm={this.setUpdateForm}/>
+          // setUpdateForm={this.setUpdateForm}
+          />
           )}/>
       </div>
     );

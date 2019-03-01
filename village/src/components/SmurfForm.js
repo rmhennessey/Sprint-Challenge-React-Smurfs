@@ -35,9 +35,9 @@ class SmurfForm extends Component {
     });
   }
 
-  updateSmurf = event => {
-    event.preventDefault();
-  }
+  // updateSmurf = event => {
+  //   event.preventDefault();
+  // }
 
   handleInputChange = e => {
     this.setState({ [e.target.name]: e.target.value });
@@ -65,8 +65,9 @@ class SmurfForm extends Component {
             value={this.state.height}
             name="height"
           />
-          <button type="submit" onClick={this.addSmurf}>Add to the village</button>
-          <button type="submit"onClick={this.updateSmurf}>Update Smurf</button>
+          <button type="submit">Add to the village</button>
+          {/* onClick={this.addSmurf} */}
+          {/* <button type="submit"onClick={this.updateSmurf}>Update Smurf</button> */}
         </form>
       </div>
     );
